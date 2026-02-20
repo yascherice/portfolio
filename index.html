@@ -13,17 +13,8 @@
   <!-- Nav -->
   <nav>
     <a href="#" class="nav-brand">
-      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="20" height="20" rx="1" stroke="#33ff66" stroke-width="1" opacity="0.5"/>
-        <rect x="4" y="4" width="6" height="6" fill="#33ff66" opacity="0.3"/>
-        <rect x="12" y="4" width="6" height="2" fill="#33ff66" opacity="0.5"/>
-        <rect x="12" y="8" width="6" height="2" fill="#33ff66" opacity="0.2"/>
-        <rect x="4" y="12" width="3" height="6" fill="#33ff66" opacity="0.5"/>
-        <rect x="9" y="12" width="3" height="6" fill="#33ff66" opacity="0.2"/>
-        <rect x="14" y="12" width="4" height="4" rx="2" fill="#33ff66" opacity="0.4"/>
-        <circle cx="7" cy="7" r="1.5" fill="#33ff66" opacity="0.8"/>
-      </svg>
-      <span>Penn Cameron Porterfield</span>
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png" width="20" height="20" alt="melon" style="image-rendering: pixelated;">
+      <span>pcporterfield</span>
     </a>
 
     <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
@@ -38,12 +29,15 @@
 
   <!-- Hero -->
   <section class="hero" id="top">
+    <div class="hero-header">From: Penn Cameron Porterfield &lt;fundlush@proton.me&gt;
+Date: 2026
+Subject: hello, world</div>
     <h1>Penn Cameron Porterfield</h1>
     <p class="subtitle">full stack engineer</p>
-    <p class="tagline">i build software big and small. foss advocate and linux daily driver. shipping clean code from the terminal.</p>
+    <p class="tagline">i build software big and small. foss advocate and linux daily driver. shipping clean code from the terminal. i use gentoo, btw.</p>
     <div class="hero-buttons">
       <a href="https://github.com/yascherice" class="btn btn-primary" target="_blank" rel="noopener">github</a>
-      <a href="#contact" class="btn btn-ghost">get in touch</a>
+      <a href="#contact" class="btn btn-ghost">contact</a>
     </div>
   </section>
 
@@ -62,54 +56,37 @@
   <!-- Projects -->
   <section id="projects">
     <h2 class="section-title">projects</h2>
-    <div class="projects-grid">
-
-      <a href="https://github.com/yascherice/monero-multisig" class="project-card" target="_blank" rel="noopener">
-        <div class="card-title">monero-multisig</div>
-        <div class="card-desc">Monero M-of-N multisig wallet CLI tool. Create wallets, exchange keys, and co-sign transactions.</div>
-        <div class="card-tags">
-          <span class="tag featured">rust</span>
-          <span class="tag">cli</span>
-          <span class="tag">crypto</span>
-        </div>
+    <div class="projects-list">
+      <a href="https://github.com/yascherice/monero-multisig" class="project-item" target="_blank" rel="noopener">
+        <span class="project-name">monero-multisig</span>
+        <span class="project-sep">--</span>
+        <span class="project-desc">M-of-N multisig wallet CLI. key exchange, co-signing, submission.</span>
+        <span class="project-tag">[rust]</span>
       </a>
-
-      <a href="https://github.com/yascherice/CSS-Cursors" class="project-card" target="_blank" rel="noopener">
-        <div class="card-title">CSS-Cursors</div>
-        <div class="card-desc">Preview and copy CSS cursor properties. Quick reference tool for web development.</div>
-        <div class="card-tags">
-          <span class="tag">css</span>
-          <span class="tag">javascript</span>
-        </div>
+      <a href="https://github.com/yascherice/CSS-Cursors" class="project-item" target="_blank" rel="noopener">
+        <span class="project-name">CSS-Cursors</span>
+        <span class="project-sep">--</span>
+        <span class="project-desc">preview & copy CSS cursor properties</span>
+        <span class="project-tag">[css/js]</span>
       </a>
-
-      <a href="https://github.com/yascherice/Flexbox-Labs" class="project-card" target="_blank" rel="noopener">
-        <div class="card-title">Flexbox-Labs</div>
-        <div class="card-desc">Interactive flexbox layout creation tool. Visual playground for CSS flex properties.</div>
-        <div class="card-tags">
-          <span class="tag">css</span>
-          <span class="tag">javascript</span>
-        </div>
+      <a href="https://github.com/yascherice/Flexbox-Labs" class="project-item" target="_blank" rel="noopener">
+        <span class="project-name">Flexbox-Labs</span>
+        <span class="project-sep">--</span>
+        <span class="project-desc">interactive flexbox layout playground</span>
+        <span class="project-tag">[css/js]</span>
       </a>
-
-      <a href="https://github.com/yascherice/Glyphs" class="project-card" target="_blank" rel="noopener">
-        <div class="card-title">Glyphs</div>
-        <div class="card-desc">Special character copy utility. Search and copy unicode glyphs and symbols.</div>
-        <div class="card-tags">
-          <span class="tag">javascript</span>
-          <span class="tag">utility</span>
-        </div>
+      <a href="https://github.com/yascherice/Glyphs" class="project-item" target="_blank" rel="noopener">
+        <span class="project-name">Glyphs</span>
+        <span class="project-sep">--</span>
+        <span class="project-desc">unicode glyph search & copy utility</span>
+        <span class="project-tag">[js]</span>
       </a>
-
-      <a href="https://github.com/yascherice/Event-KeyCodes" class="project-card" target="_blank" rel="noopener">
-        <div class="card-title">Event-KeyCodes</div>
-        <div class="card-desc">JavaScript keyboard event keycode reference. Press any key to see its event data.</div>
-        <div class="card-tags">
-          <span class="tag">javascript</span>
-          <span class="tag">reference</span>
-        </div>
+      <a href="https://github.com/yascherice/Event-KeyCodes" class="project-item" target="_blank" rel="noopener">
+        <span class="project-name">Event-KeyCodes</span>
+        <span class="project-sep">--</span>
+        <span class="project-desc">keyboard event keycode reference tool</span>
+        <span class="project-tag">[js]</span>
       </a>
-
     </div>
   </section>
 
@@ -118,25 +95,25 @@
   <!-- Stack -->
   <section id="stack">
     <h2 class="section-title">stack</h2>
-    <div class="stack-list">
-      <span class="stack-item">JavaScript</span>
-      <span class="stack-item">TypeScript</span>
-      <span class="stack-item">React</span>
-      <span class="stack-item">Python</span>
-      <span class="stack-item">Rust</span>
-      <span class="stack-item">PHP</span>
-      <span class="stack-item">Laravel</span>
-      <span class="stack-item">Tailwind</span>
-      <span class="stack-item">HTML</span>
-      <span class="stack-item">CSS</span>
-      <span class="stack-item">SCSS</span>
-      <span class="stack-item">Linux</span>
-      <span class="stack-item">AWS</span>
-      <span class="stack-item">GCP</span>
-      <span class="stack-item">Azure</span>
-      <span class="stack-item">Docker</span>
-      <span class="stack-item">Kubernetes</span>
-    </div>
+    <p class="stack-text">
+      <span>JavaScript</span> <span class="sep">/</span>
+      <span>TypeScript</span> <span class="sep">/</span>
+      <span>React</span> <span class="sep">/</span>
+      <span>Python</span> <span class="sep">/</span>
+      <span>Rust</span> <span class="sep">/</span>
+      <span>PHP</span> <span class="sep">/</span>
+      <span>Laravel</span> <span class="sep">/</span>
+      <span>Tailwind</span> <span class="sep">/</span>
+      <span>HTML</span> <span class="sep">/</span>
+      <span>CSS</span> <span class="sep">/</span>
+      <span>SCSS</span> <span class="sep">/</span>
+      <span>Linux</span> <span class="sep">/</span>
+      <span>AWS</span> <span class="sep">/</span>
+      <span>GCP</span> <span class="sep">/</span>
+      <span>Azure</span> <span class="sep">/</span>
+      <span>Docker</span> <span class="sep">/</span>
+      <span>Kubernetes</span>
+    </p>
   </section>
 
   <hr class="divider">
@@ -144,16 +121,17 @@
   <!-- Contact -->
   <section id="contact" class="contact">
     <h2 class="section-title">contact</h2>
-    <p>interested in working together or just want to say hey? reach out.</p>
+    <p>interested in working together or just want to say hey?</p>
     <div class="contact-links">
-      <a href="mailto:fundlush@proton.me" class="btn btn-primary">email</a>
-      <a href="https://github.com/yascherice" class="btn btn-ghost" target="_blank" rel="noopener">github</a>
+      <a href="mailto:fundlush@proton.me">fundlush@proton.me</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/yascherice" target="_blank" rel="noopener">github.com/yascherice</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    &copy; 2026 Penn Cameron Porterfield
+    -- end of message --
   </footer>
 
   <script src="script.js"></script>
