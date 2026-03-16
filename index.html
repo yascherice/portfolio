@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<div id="page-front">
+
   <!-- Nav -->
   <nav>
     <a href="#top" class="nav-brand">
@@ -52,6 +54,7 @@ Subject: greetings</div>
     <p class="about-text">
       full stack engineer with experience shipping production software across the stack — from React frontends to <span class="highlight">cloud infrastructure on AWS, Azure, and GCP</span>. i care about clean architecture, developer experience, and building things that last. currently leaning deeper into <span class="highlight">cloud engineering and DevOps</span>. foss contributor, linux daily driver (<span class="highlight">i use gentoo, btw</span>), and firm believer that the terminal is the best IDE.
     </p>
+    <img src="me_and_noogs.png" alt="me and noogs" class="about-photo">
   </section>
 
   <hr class="divider">
@@ -75,15 +78,15 @@ Subject: greetings</div>
       <span class="project-item">
         <span class="project-name">distributron</span>
         <span class="project-sep">--</span>
-        <span class="project-desc">alcohol delivery ecommerce startup. geofencing, jamstack, ycombinator interviews.</span>
+        <span class="project-desc">alcohol delivery ecommerce startup. geofencing, jamstack, ycombinator interview.</span>
         <span class="project-tag">[vue/jamstack]</span>
       </span>
-      <span class="project-item">
+      <a href="https://treetz.pages.dev" class="project-item" target="_blank" rel="noopener">
         <span class="project-name">treetz</span>
         <span class="project-sep">--</span>
-        <span class="project-desc">indie unity mobile game with an 8-bit space theme. co-led a team of 6 — devs and artists — from concept to launch.</span>
-        <span class="project-tag">[unity/c#]</span>
-      </span>
+        <span class="project-desc">indie mobile game with an 8-bit space theme. co-led a team of 6 — devs and artists — from concept to launch. being remade in ue5.</span>
+        <span class="project-tag">[ue5/c++]</span>
+      </a>
       <a href="https://github.com/melonmelonz/monero-multisig" class="project-item" target="_blank" rel="noopener">
         <span class="project-name">monero-multisig</span>
         <span class="project-sep">--</span>
@@ -162,6 +165,91 @@ Subject: greetings</div>
     -- end of message --
   </footer>
   <!-- no linkedin. intentional. opsec & privacy. if you're looking, reach out directly. -->
+
+</div><!-- #page-front -->
+
+<div id="page-back">
+  <div class="falling-stars-container" aria-hidden="true">
+    <span class="falling-star">✦</span>
+    <span class="falling-star">★</span>
+    <span class="falling-star">✦</span>
+    <span class="falling-star">★</span>
+    <span class="falling-star">✦</span>
+    <span class="falling-star">★</span>
+    <span class="falling-star">✦</span>
+    <span class="falling-star">★</span>
+  </div>
+
+  <div class="back-inner">
+    <marquee behavior="scroll" direction="left">&#9733; YOU FOUND THE SECRET PAGE &#9733; &nbsp;&nbsp;&nbsp; welcome 2 my corner of the web &nbsp;&nbsp;&nbsp; &#9733; YOU FOUND THE SECRET PAGE &#9733; &nbsp;&nbsp;&nbsp; welcome 2 my corner of the web &nbsp;&nbsp;&nbsp;</marquee>
+
+    <div class="gif-strip">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/183.gif" alt="Marill" title="Marill">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/202.gif" alt="Wobbuffet" title="Wobbuffet">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/113.gif" alt="Chansey" title="Chansey">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/131.gif" alt="Lapras" title="Lapras">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/79.gif" alt="Slowpoke" title="Slowpoke">
+    </div>
+
+    <div class="retro-badges">
+      <span class="blink">&#128679; UNDER CONSTRUCTION &#128679;</span>
+      <span>visitors: 001337</span>
+    </div>
+
+    <div class="retro-badge-strip">
+      <span class="retro-badge badge-ie">Best Viewed in<br>Internet Explorer 4.0</span>
+      <span class="retro-badge badge-notepad">Made with<br>Notepad</span>
+      <span class="retro-badge badge-resolution">800&times;600<br>or better</span>
+      <span class="retro-badge badge-html">HTML 3.2<br>Compliant</span>
+    </div>
+
+    <div class="back-blog">
+      <h2>~* MY BLOG *~</h2>
+      <article class="blog-post">
+        <h3>There and back again: a PVM story</h3>
+        <img src="pvm-pl1.png" alt="PVM" class="blog-img">
+        <p><em>coming soon...</em></p>
+      </article>
+    </div>
+
+    <button id="btn-flip-back">&#9668; back to normal</button>
+  </div>
+
+  <div id="midi-player">
+    <div class="midi-titlebar">
+      <span>MIDI Player</span>
+      <button class="midi-close">&#x2715;</button>
+    </div>
+    <div class="midi-screen">
+      <span class="midi-filename">secret_theme.mid</span>
+      <div class="midi-eq">
+        <span class="midi-bar"></span>
+        <span class="midi-bar"></span>
+        <span class="midi-bar"></span>
+        <span class="midi-bar"></span>
+        <span class="midi-bar"></span>
+      </div>
+    </div>
+    <div class="midi-controls">
+      <button class="midi-btn" id="midi-play-btn">&#9654;</button>
+      <button class="midi-btn" id="midi-stop-btn">&#9632;</button>
+    </div>
+  </div>
+
+  <div id="win95-popup">
+    <div class="win95-titlebar">
+      <span>Message from Webmaster</span>
+      <button class="win95-close" id="win95-x">&#x2715;</button>
+    </div>
+    <div class="win95-body">
+      <p>Welcome, visitor #1337!</p>
+      <p>You have discovered the secret page.<br>You are truly 1 of a kind!!! :)</p>
+      <div class="win95-buttons">
+        <button class="win95-btn" id="win95-ok">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>
