@@ -874,6 +874,305 @@ body[data-side="back"] #midi-player {
   border-bottom: 2px solid #ffffff;
 }
 
+/* ── Rainbow Heading ───────────────────────────────────── */
+
+.rainbow-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', 'Courier New', cursive;
+  margin: 1rem 0 0.5rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+
+.rainbow-heading span {
+  display: inline-block;
+  animation: rainbow-cycle 3s linear infinite;
+}
+
+@keyframes rainbow-cycle {
+  0%   { color: #ff0000; }
+  14%  { color: #ff8800; }
+  28%  { color: #ffff00; }
+  42%  { color: #00ff00; }
+  57%  { color: #00ffff; }
+  71%  { color: #0000ff; }
+  85%  { color: #ff00ff; }
+  100% { color: #ff0000; }
+}
+
+/* ── Bottom Marquee ────────────────────────────────────── */
+
+.marquee-bottom {
+  background: #006400;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0.3rem 0;
+  letter-spacing: 0.06em;
+  margin: 1rem 0;
+}
+
+/* ── Retro Clock ───────────────────────────────────────── */
+
+#retro-clock {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  width: 135px;
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  z-index: 200;
+  font-family: 'Arial', sans-serif;
+}
+
+body[data-side="back"] #retro-clock {
+  display: block;
+}
+
+.clock-titlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 3px 5px;
+}
+
+.clock-body {
+  padding: 6px 8px;
+  text-align: center;
+}
+
+#clock-time {
+  font-size: 0.82rem;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Courier New', monospace;
+}
+
+#clock-date {
+  font-size: 0.58rem;
+  color: #404040;
+  margin-top: 2px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ── Guestbook ─────────────────────────────────────────── */
+
+.back-guestbook {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: rgba(0, 0, 0, 0.4);
+  border: 4px solid transparent;
+  border-image: linear-gradient(90deg, #ff69b4, #00ffff, #ffff00, #ff69b4) 1;
+  padding: 1.25rem;
+}
+
+.back-guestbook h2 {
+  color: #ff69b4;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #000000;
+}
+
+.gb-entry {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px dashed #00ffff;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.6rem;
+  text-align: left;
+}
+
+.gb-entry:last-child {
+  margin-bottom: 0;
+}
+
+.gb-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.gb-name {
+  color: #ffff00;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.gb-date {
+  color: #00ffff;
+  font-size: 0.62rem;
+}
+
+.gb-msg {
+  color: #ffffff;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+/* ── Web Ring ──────────────────────────────────────────── */
+
+.webring {
+  max-width: 400px;
+  margin: 1.5rem auto;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px ridge #c0c0c0;
+  font-family: 'Arial', sans-serif;
+}
+
+.webring-title {
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 0.78rem;
+  margin-bottom: 0.6rem;
+}
+
+.webring-nav {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.webring-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  font-size: 0.68rem;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+}
+
+.webring-btn:active {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* ── AIM Buddy List ────────────────────────────────────── */
+
+#aim-widget {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  width: 165px;
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  z-index: 200;
+  font-family: 'Arial', sans-serif;
+}
+
+body[data-side="back"] #aim-widget {
+  display: block;
+}
+
+#aim-widget.aim-hidden {
+  display: none !important;
+}
+
+.aim-titlebar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 3px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aim-close-btn {
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  font-size: 0.55rem;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.aim-body {
+  padding: 6px;
+  background: #ffffff;
+  font-size: 0.62rem;
+  color: #000000;
+}
+
+.aim-group {
+  font-weight: bold;
+  color: #000080;
+  font-size: 0.6rem;
+  margin-bottom: 2px;
+}
+
+.aim-buddy {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 0;
+  color: #000000;
+  font-size: 0.62rem;
+}
+
+.aim-away-msg {
+  font-style: italic;
+  color: #808080;
+  font-size: 0.55rem;
+  margin: 1px 0 4px 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aim-footer {
+  display: flex;
+  gap: 3px;
+  padding: 4px;
+  justify-content: center;
+  background: #c0c0c0;
+}
+
+.aim-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  font-size: 0.62rem;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+}
+
+.aim-btn:active {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
 /* ── Responsive ────────────────────────────────────────── */
 
 @media (max-width: 640px) {

@@ -53,6 +53,21 @@ document.getElementById('btn-flip-back').addEventListener('click', () => {
   flipTo('front');
 });
 
+// ── Rainbow Heading ──────────────────────────────────────────
+
+(function initRainbowHeading() {
+  const el = document.querySelector('.rainbow-heading');
+  if (!el) return;
+  const chars = [...el.textContent];
+  el.textContent = '';
+  chars.forEach((ch, i) => {
+    const s = document.createElement('span');
+    s.textContent = ch === ' ' ? '\u00a0' : ch;
+    s.style.animationDelay = `-${(i * 0.18).toFixed(2)}s`;
+    el.appendChild(s);
+  });
+})();
+
 // ── Star trail ──────────────────────────────────────────────
 
 const trailColors = ['#ff69b4','#00ffff','#ffff00','#ff4500','#7fff00','#ff00ff','#00ff7f','#ffa500'];
@@ -78,6 +93,35 @@ function stopStarTrail() {
     trailListener = null;
   }
   document.querySelectorAll('.star-trail').forEach(el => el.remove());
+}
+
+// ── Retro Clock ──────────────────────────────────────────────
+
+let clockInterval = null;
+
+function updateClock() {
+  const now = new Date();
+  let h = now.getHours();
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const s = String(now.getSeconds()).padStart(2, '0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  document.getElementById('clock-time').textContent = `${h}:${m}:${s} ${ampm}`;
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const mo = String(now.getMonth() + 1).padStart(2, '0');
+  const d  = String(now.getDate()).padStart(2, '0');
+  const yr = String(now.getFullYear()).slice(-2);
+  document.getElementById('clock-date').textContent = `${days[now.getDay()]} ${mo}/${d}/${yr}`;
+}
+
+function startClock() {
+  updateClock();
+  clockInterval = setInterval(updateClock, 1000);
+}
+
+function stopClock() {
+  clearInterval(clockInterval);
+  clockInterval = null;
 }
 
 // ── Win95 Popup ──────────────────────────────────────────────
@@ -115,6 +159,30 @@ document.querySelector('.midi-close').addEventListener('click', () => {
   midiPlayer.classList.remove('playing');
 });
 
+// ── AIM Widget ────────────────────────────────────────────────
+
+const aimWidget = document.getElementById('aim-widget');
+
+document.getElementById('aim-close').addEventListener('click', () => {
+  aimWidget.classList.add('aim-hidden');
+});
+
+document.getElementById('aim-im-btn').addEventListener('click', () => {
+  alert('x0x_webmaster_x0x is away:\n\n"brb gettin pizza lol"\n\n(Last online: 04/20/1999)');
+});
+
+document.getElementById('aim-setup-btn').addEventListener('click', () => {
+  alert('AOL Instant Messenger requires a valid AOL account.\n\nDial-up connection required.');
+});
+
+// ── Web Ring ──────────────────────────────────────────────────
+
+document.querySelectorAll('.webring-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('Error 404: This web ring is offline.\n\nGeocities shut down on October 26, 2009. :(\n\nRIP geocities.com 1994-2009');
+  });
+});
+
 // ── Page flip ────────────────────────────────────────────────
 
 function flipTo(side) {
@@ -125,6 +193,8 @@ function flipTo(side) {
       back.style.display  = 'block';
       document.body.dataset.side = 'back';
       startStarTrail();
+      startClock();
+      aimWidget.classList.remove('aim-hidden');
       setTimeout(showWin95Popup, 300);
       setTimeout(midiAutoPlay, 600);
     } else {
@@ -132,6 +202,7 @@ function flipTo(side) {
       front.style.display = 'block';
       document.body.dataset.side = 'front';
       stopStarTrail();
+      stopClock();
       closeWin95Popup();
       midiPlayer.classList.remove('playing');
     }
