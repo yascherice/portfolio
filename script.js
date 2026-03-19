@@ -124,41 +124,6 @@ function stopClock() {
   clockInterval = null;
 }
 
-// ── Win95 Popup ──────────────────────────────────────────────
-
-const win95Popup = document.getElementById('win95-popup');
-
-function showWin95Popup() {
-  win95Popup.classList.add('open');
-}
-
-function closeWin95Popup() {
-  win95Popup.classList.remove('open');
-}
-
-document.getElementById('win95-x').addEventListener('click', closeWin95Popup);
-document.getElementById('win95-ok').addEventListener('click', closeWin95Popup);
-
-// ── MIDI Player ───────────────────────────────────────────────
-
-const midiPlayer = document.getElementById('midi-player');
-
-function midiAutoPlay() {
-  midiPlayer.classList.add('playing');
-}
-
-document.getElementById('midi-play-btn').addEventListener('click', () => {
-  midiPlayer.classList.add('playing');
-});
-
-document.getElementById('midi-stop-btn').addEventListener('click', () => {
-  midiPlayer.classList.remove('playing');
-});
-
-document.querySelector('.midi-close').addEventListener('click', () => {
-  midiPlayer.classList.remove('playing');
-});
-
 // ── AIM Widget ────────────────────────────────────────────────
 
 const aimWidget = document.getElementById('aim-widget');
@@ -195,16 +160,12 @@ function flipTo(side) {
       startStarTrail();
       startClock();
       aimWidget.classList.remove('aim-hidden');
-      setTimeout(showWin95Popup, 300);
-      setTimeout(midiAutoPlay, 600);
     } else {
       back.style.display  = 'none';
       front.style.display = 'block';
       document.body.dataset.side = 'front';
       stopStarTrail();
       stopClock();
-      closeWin95Popup();
-      midiPlayer.classList.remove('playing');
     }
     document.body.classList.remove('flipping-out');
     document.body.classList.add('flipping-in');
